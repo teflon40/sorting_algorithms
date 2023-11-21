@@ -10,11 +10,11 @@
 
 void swap(int *a, int *b)
 {
-    int hold;
+	int hold;
 
-    hold = *a;
-    *a = *b;
-    *b = hold;
+	hold = *a;
+	*a = *b;
+	*b = hold;
 }
 
 /**
@@ -29,13 +29,13 @@ void bubble_sort(int *array, size_t size)
 {
 	int i, j;
 
-    /* Loop to control the number of passes */
+	/* Loop to control the number of passes */
 	for (i = 1; i <= size; i++)
 	{
-        /* Loop to control the number of comparisons per pass */
+		/* Loop to control the number of comparisons per pass */
 		for (j = 0; j < size - 1; j++)
 		{
-            /* Swap if current element > next */
+			/* Swap if current element > next */
 			if (array[j] > array[j + 1])
 			{
 				swap(&array[j], &array[j + 1]);
