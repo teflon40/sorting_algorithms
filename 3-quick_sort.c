@@ -31,13 +31,13 @@ void swap(int *a, int *b)
  */
 int split(int *array, int l, int h, size_t size)
 {
-	int i;
+	int i, pivot = array[h];
 	int firsthigh;
 
 	firsthigh = l;
 	for (i = l; i < h; i++)
 	{
-		if (array[i] < array[h])
+		if (array[i] <= pivot)
 		{
 			if (firsthigh != i)
 			{
