@@ -27,8 +27,10 @@ void swap(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	int i, j;
+	size_t i, j;
 
+	if (array == NULL)
+		return;
 	/* Loop to control the number of passes */
 	for (i = 1; i <= size; i++)
 	{

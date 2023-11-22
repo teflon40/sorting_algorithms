@@ -32,10 +32,8 @@ void swap(int *a, int *b)
 int split(int *array, int l, int h, size_t size)
 {
 	int i;
-	int p;
 	int firsthigh;
 
-	p = h;
 	firsthigh = l;
 	for (i = l; i < h; i++)
 	{
@@ -89,5 +87,7 @@ void tmp_sort(int *array, int l, int h, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	return (tmp_sort(array, 0, size - 1, size));
+	if (array == NULL)
+		return;
+	tmp_sort(array, 0, size - 1, size);
 }
