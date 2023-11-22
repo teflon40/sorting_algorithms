@@ -87,7 +87,8 @@ void tmp_sort(int *array, int l, int h, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (array == NULL)
+	if (array == NULL || size < 2)
 		return;
+
 	tmp_sort(array, 0, size - 1, size);
 }
