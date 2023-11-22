@@ -23,8 +23,11 @@ void counting_sort(int *array, size_t size)
 	if (tmp == NULL)
 		return;
 	result = malloc(sizeof(int) * size);
-	if (tmp == NULL)
+	if (result == NULL)
+	{
+		free(tmp);
 		return;
+	}
 	for (i = 0; i <= (size_t) max; i++)
 		tmp[i] = 0;
 	for (j = 0; j < size; j++)
